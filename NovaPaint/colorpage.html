@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloring Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/brush.css">
+    <link rel="stylesheet" href="css/layers.css">
+</head>
+<body>
+    <div class="half-header">
+        <h1>Nova Paint</h1>
+        <a href="main.html">
+             <img src="img/home.svg" alt="Home Icon" class="home-icon">
+        </a>
+        </div>
+    <div class="container">
+        <div class="toolbar">
+            <div class="color-picker">
+    <label for="color">Choose Color:</label>
+    <button id="color-picker-btn">ㅤㅤbroken</button> <!-- Use a button instead of input[type="color"] -->
+    <div class="color-options">
+                    <button class="color-btn" style="background-color: #FF5733;"></button> <!-- User Color from color picker -->
+                    <button class="color-btn" style="background-color: #FF5733;"></button> <!-- Red -->
+                    <button class="color-btn" style="background-color: #F39C12;"></button> <!-- Orange -->
+                    <button class="color-btn" style="background-color: #FFFF00;"></button> <!-- Yellow -->
+                    <button class="color-btn" style="background-color: #FFC0CB;"></button> <!-- Pink -->
+                    <button class="color-btn" style="background-color: #33FF57;"></button> <!-- Green -->
+                    <button class="color-btn" style="background-color: #3357FF;"></button> <!-- Blue -->
+                    <button class="color-btn" style="background-color: #4B0082;"></button> <!-- Indigo -->
+                    <button class="color-btn" style="background-color: #9B59B6;"></button> <!-- Violet -->
+                    <button class="color-btn" style="background-color: #A52A2A;"></button> <!-- Brown -->
+                </div>
+                    <button class="erase-btn" style="background-image: url('img/erase.svg');">ㅤㅤbroken</button>
+
+                    <input type="color" id="color" style="opacity: 0; position: absolute; left: -9999px;"> <!-- Hide the color input -->
+            </div>
+            <div class="actions">
+                <button id="clear">Clear</button>
+                <button id="undo">Undo</button>
+                <button id="redo">Redo</button>
+                <button id="download">Download/Save</button>
+            </div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="drawingCanvas"></canvas>
+        </div>
+        <div class="layer-panel">
+            <h2>Layers</h2>
+            <button id="add-layer">+</button>
+            <ul id="layer-list">
+                <!-- Layer List Content Goes Here -->
+            </ul>
+        </div>
+        <div class="brush-panel">
+    <h2>Brushes</h2>
+<ul class="brush-sizes">
+    <li class="brush-size" data-size="5"><div class="brush-dot" style="width: 5px; height: 5px;"></div></li>
+    <li class="brush-size" data-size="10"><div class="brush-dot" style="width: 10px; height: 10px;"></div></li>
+    <li class="brush-size" data-size="15"><div class="brush-dot" style="width: 15px; height: 15px;"></div></li>
+    <li class="brush-size" data-size="20"><div class="brush-dot" style="width: 20px; height: 20px;"></div></li>
+    <li class="brush-size" data-size="25"><div class="brush-dot" style="width: 25px; height: 25px;"></div></li>
+    <li class="brush-size" data-size="30"><div class="brush-dot" style="width: 30px; height: 30px;"></div></li>
+    <li class="brush-size" data-size="40"><div class="brush-dot" style="width: 40px; height: 40px;"></div></li>
+    <li class="brush-size" data-size="50"><div class="brush-dot" style="width: 50px; height: 50px;"></div></li>
+</ul>
+
+    <div class="slider-container">
+        <label for="brush-size-slider">Brush Size: <span id="brush-size-value">25</span>px</label>
+        <input type="range" id="brush-size-slider" min="5" max="50" value="25">
+    </div>
+</div>
+    <script src="js/brush.js" defer></script>
+    <script src="js/color.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+.brush-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f3f3f3;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.brush-panel h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.brush-sizes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brush-size {
+    margin: 254px;
+    position: relative;
+    margin-top: 55px;
+}
+.brush-size:hover {
+    cursor: pointer;
+}
+.brush-dot {
+    border-radius: 50%;
+    background-color: #4CAF50;
+    position: absolute;
+    top: calc(50% + 130px); /* Adjusted top position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.brush-size[data-size="5"] .brush-dot {
+    width: 5px;
+    height: 5px;
+}
+
+.brush-size[data-size="10"] .brush-dot {
+    width: 10px;
+    height: 10px;
+}
+
+.brush-size[data-size="15"] .brush-dot {
+    width: 15px;
+    height: 15px;
+}
+
+.brush-size[data-size="20"] .brush-dot {
+    width: 20px;
+    height: 20px;
+}
+
+.brush-size[data-size="25"] .brush-dot {
+    width: 25px;
+    height: 25px;
+}
+
+.brush-size[data-size="30"] .brush-dot {
+    width: 30px;
+    height: 30px;
+}
+
+.brush-size[data-size="40"] .brush-dot {
+    width: 40px;
+    height: 40px;
+}
+.brush-size[data-size="50"] .brush-dot {
+    width: 50px;
+    height: 50px;
+}
+
+.brush-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.brush-panel li {
+    margin-bottom: 5px;
+}
+
+.brush-panel button {
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.brush-panel button:hover {
+    background-color: #45a049;
+}
+
+.brush-panel button:active {
+    background-color: #3e8e41;
+}
+.slider-container {
+    margin-top: -480px;
+    text-align: center;
+}
+
+#brush-size-slider {
+    width: 250px;
+    justify-content: center;
+    appearance: none;
+    height: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+#brush-size-slider:hover {
+    opacity: 1;
+}
+
+#brush-size-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#brush-size-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
