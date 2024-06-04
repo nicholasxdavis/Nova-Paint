@@ -39,7 +39,7 @@
 }
 
 .layer-panel .delete-layer-btn {
-    background-color: #e74c3c;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
@@ -49,11 +49,11 @@
 }
 
 .layer-panel .delete-layer-btn:hover {
-    background-color: #c0392b;
+    background-color: #45a049;
 }
 
 .layer-panel .delete-layer-btn:active {
-    background-color: #a93226;
+    background-color: #4CAF50;
 }
 
 .layer-panel button {
@@ -89,6 +89,9 @@
             height: 50px;
             margin-right: 10px;
         }
+        .layer-snapshot.selected {
+    box-shadow: 0 0 5px 2px #4CAF50; /* Green outline */
+}
         .delete-layer-btn {
             margin-left: 10px;
         }

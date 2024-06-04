@@ -19,7 +19,7 @@ body {
     left: 50%; /* Position it at 50% from the left */
     transform: translateX(-50%); /* Center it horizontally */
     z-index: 1; /* Ensure it's above other elements */
-    box-shadow: 0 0 5px 2px #00FF00; /* Green outline */
+    box-shadow: 0 0 5px 2px #4CAF50; /* Green outline */
     border-radius: 10px;
     top: -9px;
 }
@@ -66,18 +66,36 @@ body {
     font-weight: bold;
 
 }
-#color-picker-btn {
-    background-color: rgba(0, 0, 0, 0); /* Transparent background */
-    background-image: url('img/colorpicker.svg'); /* Add background image */
-    background-size: contain; /* Ensure the background image fits within the button */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    border: none;
-    width: 30px; /* Adjust width as needed */
-    height: 30px; /* Adjust height as needed */
-    cursor: pointer;
-    margin-right: 10px; /* Add margin to create space between the color picker and other elements */
+#color {
+  background-color: currentColor;
+  margin-right: 10px; /* Add margin to create space between the color picker and other elements */
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0;
 }
-#color-picker-btn:hover {
+
+#color::-webkit-color-swatch {
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#color::-webkit-color-swatch-wrapper {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 0;
+}
+#color:hover {
     transform: scale(1.1);
 }
 

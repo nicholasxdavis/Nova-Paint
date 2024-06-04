@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coloring Page</title>
+    <title>Nova Paint</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/brush.css">
     <link rel="stylesheet" href="css/layers.css">
@@ -19,7 +19,7 @@
         <div class="toolbar">
             <div class="color-picker">
     <label for="color">Choose Color:</label>
-    <button id="color-picker-btn">ㅤㅤbroken</button> <!-- Use a button instead of input[type="color"] -->
+<input type="color" id="color" style="">
     <div class="color-options">
                     <button class="color-btn" style="background-color: #FF5733;"></button> <!-- User Color from color picker -->
                     <button class="color-btn" style="background-color: #FF5733;"></button> <!-- Red -->
@@ -32,9 +32,8 @@
                     <button class="color-btn" style="background-color: #9B59B6;"></button> <!-- Violet -->
                     <button class="color-btn" style="background-color: #A52A2A;"></button> <!-- Brown -->
                 </div>
-                    <button class="erase-btn" style="background-image: url('img/erase.svg');">ㅤㅤbroken</button>
+                    <button class="erase-btn" style="background-image: url('img/erase.svg');"></button>
 
-                    <input type="color" id="color" style="opacity: 0; position: absolute; left: -9999px;"> <!-- Hide the color input -->
             </div>
             <div class="actions">
                 <button id="clear">Clear</button>
@@ -73,5 +72,6 @@
 </div>
     <script src="js/brush.js" defer></script>
     <script src="js/color.js" defer></script>
+    <script src="js/hotkeys.js" defer></script>
 </body>
 </html>

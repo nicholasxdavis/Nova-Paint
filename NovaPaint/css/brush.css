@@ -29,9 +29,9 @@
 }
 
 .brush-size {
-    margin: 254px;
+    margin: 250px;
     position: relative;
-    margin-top: 55px;
+    margin-top: 75px;
 }
 .brush-size:hover {
     cursor: pointer;
@@ -43,6 +43,12 @@
     top: calc(50% + 130px); /* Adjusted top position */
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 0.5s ease;
+}
+.brush-dot:hover {
+    background-color: #45a049;
+    transform: scaleX(1.7) scaleZ(1) scaleY(1.7); 
+
 }
 
 .brush-size[data-size="5"] .brush-dot {
@@ -113,7 +119,7 @@
     background-color: #3e8e41;
 }
 .slider-container {
-    margin-top: -480px;
+    margin-top: -645px;
     text-align: center;
 }
 

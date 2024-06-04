@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Paint</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Nova Paint</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="othergames.html">More Games!</a>
+        </nav>
+    </header>
+    
+    <section id="home" class="section">
+        <h2>Welcome to the Fun!</h2>
+        <p>Choose your favorite drawing and start coloring now! <br> Or unleash your creativity on the blank canvas.</p>
+        <button onclick="colorhtml()">Blank Canvas</button>
+    </section>
+
+<section id="gallery" class="section">
+    <h2>Coloring Gallery</h2>
+    <div class="gallery">
+        <div class="card">
+            <a href="color1.html"><img src="img/color (1).jpg" alt="Drawing 1"></a>
+        </div>
+        <div class="card">
+            <a href="color2.html"><img src="img/color (2).jpg" alt="Drawing 2"></a>
+        </div>
+        <div class="card">
+            <a href="color3.html"><img src="img/color (3).jpg" alt="Drawing 3"></a>
+        </div>
+        <div class="card">
+            <a href="color4.html"><img src="img/color (4).jpg" alt="Drawing 4"></a>
+        </div>
+        <div class="card">
+            <a href="color5.html"><img src="img/color (5).jpg" alt="Drawing 5"></a>
+        </div>
+        <div class="card">
+            <a href="color6.html"><img src="img/color (6).jpg" alt="Drawing 6"></a>
+        </div>
+        
+    </div>
+</section>
+
+    <section id="rating" class="section">
+    <h2>Rate Us</h2>
+    <p>We value your feedback! Please rate your experience.</p>
+    <form>
+        <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5" required>
+            <label for="star5" title="5 stars">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4" required>
+            <label for="star4" title="4 stars">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3" required>
+            <label for="star3" title="3 stars">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2" required>
+            <label for="star2" title="2 stars">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1" required>
+            <label for="star1" title="1 star">&#9733;</label>
+        </div>
+        <textarea placeholder="Your Feedback" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+
+    <footer>
+        <p>&copy; 2024 BLACNOVA. All rights reserved.</p>
+    </footer>
+    <script>
+        function colorhtml() {
+            window.location.href = 'colorpage.html';
+        }
+    </script>
+</body>
+</html>
