@@ -29,8 +29,9 @@ nav a {
 }
 
 .section {
-    padding: 50px 20px;
+    padding: 50px 160px;
     text-align: center;
+
 }
 
 .section h2 {
@@ -44,8 +45,19 @@ nav a {
     font-style: italic;
     opacity: 80%
 }
+u {
+    color: #4CAF50;
+}
 
+a {
+    color: #4CAF50;
+    text-decoration: none; /* Remove default underline */
+}
 
+a:hover, u:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #3e7b40;
+}
 button {
     padding: 15px 30px;
     font-size: 1.2em;
@@ -57,7 +69,7 @@ button {
 }
 
 button:hover {
-    background: #38b000;
+    background: #45a049;
 }
 
 .gallery {

@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ... existing code ...
-    // Key bindings
     document.addEventListener("keydown", (e) => {
         // Brush Size adjustment: [ for decrease, ] for increase
         if (e.key === "[" || e.key === "]") {
@@ -12,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (e.key === "]" && currentBrushSize < parseInt(brushSizeSlider.max)) {
                 brushSizeSlider.value = currentBrushSize + 1;
             }
-            // Apply the new brush size
             const event = new Event("input");
             brushSizeSlider.dispatchEvent(event);
         }
@@ -44,30 +41,5 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault(); // Prevent browser default paste behavior
             pasteImage();
         }
-    });
-
-    // Function to copy the current canvas image
-    function copyImage() {
-        const compositeCanvas = document.createElement("canvas");
-        const compositeCtx = compositeCanvas.getContext("2d");
-        compositeCanvas.width = canvas.width;
-        compositeCanvas.height = canvas.height;
-        compositeCtx.drawImage(layers[activeLayerIndex].canvas, 0, 0);
-        const imageData = compositeCanvas.toDataURL();
-        localStorage.setItem("copiedImage", imageData);
-    }
-
-    // Function to paste the copied image onto the canvas
-    function pasteImage() {
-        const imageData = localStorage.getItem("copiedImage");
-        if (imageData) {
-            const img = new Image();
-            img.onload = function () {
-                ctx.drawImage(img, 0, 0);
-            };
-            img.src = imageData;
-        }
-    }
-
-    // ... existing code ...
-});
+    };
+}

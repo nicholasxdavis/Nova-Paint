@@ -1,5 +1,3 @@
-// /scripts/brush.js
-
 document.addEventListener("DOMContentLoaded", () => {
     const brushSizes = document.querySelectorAll(".brush-size");
     const brushSizeSlider = document.getElementById("brush-size-slider");

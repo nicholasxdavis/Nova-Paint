@@ -1,3 +1,4 @@
+/* Style the layer panel */
 .layer-panel {
     position: absolute;
     top: 0;
@@ -11,22 +12,26 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
 }
 
+/* Center align the panel header */
 .layer-panel h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    justify-content: center;
     text-align: center;
 }
 
+/* Style the list of layers */
 .layer-panel ul {
     list-style: none;
     padding: 0;
     margin: 0;
     flex-grow: 1;
+    overflow-y: auto; /* Allow scrolling for the layer list */
 }
 
+/* Style individual layer items */
 .layer-panel li {
     margin-bottom: 5px;
     display: flex;
@@ -36,29 +41,13 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
+    position: relative; /* Ensure the dropdown menu is positioned correctly */
 }
 
-.layer-panel .delete-layer-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
-}
-
-.layer-panel .delete-layer-btn:hover {
-    background-color: #45a049;
-}
-
-.layer-panel .delete-layer-btn:active {
-    background-color: #4CAF50;
-}
-
+/* Style buttons within the panel */
 .layer-panel button {
     margin-bottom: 5px;
-    padding: 8px 12px;
+    padding: 8px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -67,6 +56,7 @@
     transition: background-color 0.3s;
 }
 
+/* Hover and active states for buttons */
 .layer-panel button:hover {
     background-color: #45a049;
 }
@@ -79,22 +69,135 @@
 .layer-panel .selected {
     background-color: #f0f0f0;
 }
+
+/* Style individual layer items */
 .layer-item {
-            display: flex;
-            align-items: center;
-            margin: 5px 0;
-        }
-        .layer-snapshot {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-        .layer-snapshot.selected {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.layer-item.dragging {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 999;
+}
+
+/* Style the layer snapshot */
+.layer-snapshot {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.layer-snapshot.selected {
     box-shadow: 0 0 5px 2px #4CAF50; /* Green outline */
 }
-        .delete-layer-btn {
-            margin-left: 10px;
-        }
-        .hidden {
-            display: none;
-        }
+
+/* Style the layer name input */
+.layer-name {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    outline: none;
+}
+
+.layer-name:focus {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Hide elements with the hidden class */
+.hidden {
+    display: none;
+}
+
+/* Style the options button for each layer */
+.options-layer-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -150px; /* Adjust the spacing to match the previous delete button */
+}
+
+.options-layer-btn .icon {
+    width: 13px;
+    height: 13px;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #2c2c2c;
+    border: none;
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    width: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ensure dropdown menu is visible when shown */
+.dropdown-menu.show {
+    display: block;
+    border: 1px solid #ddd; /* Add border for better separation */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff; /* Ensure consistent background color */
+}
+
+/* Style individual dropdown items */
+.dropdown-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4CAF50;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0; /* Separator between items */
+}
+
+.dropdown-item:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+    background-color: #f9f9f9;
+    color: #388E3C; /* Darker green for better contrast */
+}
+
+/* Active state for dropdown items */
+.dropdown-item:active {
+    background-color: #4CAF50;
+    color: #fff; /* White text for better readability */
+}
+
+/* Style icons within dropdown items */
+.dropdown-item img {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    filter: grayscale(100%); /* Grayscale effect */
+    transition: filter 0.2s; /* Smooth transition for filter */
+}
+
+/* Hover effect for icons */
+.dropdown-item:hover img {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+}
